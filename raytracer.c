@@ -7,8 +7,8 @@
 
 //  Build on macOS/Homebrew (M-series):
 //      brew install sdl2
-//      gcc ray2d_sdl2.c -std=c17 \
-//          -I/opt/homebrew/include/SDL2 \
+//      gcc ray2d_sdl2.c -std=c17 
+//          -I/opt/homebrew/include/SDL2 
 //          -L/opt/homebrew/lib -lSDL2 -lm -o ray2d
 
 //  Run: ./ray2d
@@ -25,7 +25,7 @@
 #define H 600
 #define MAX_RAYS 200
 #define CIRCLE_RADIUS 30
-#define MOVE_SPEED 5
+#define MOVE_SPEED 10
 
 // 2D vector
 typedef struct { float x, y; } Vec2;
@@ -123,7 +123,7 @@ int main(int argc, char **argv) {
 
         // Draw rectangle (cube) in grey
         SDL_Rect sdlRect = { (int)rect.x, (int)rect.y, (int)rect.w, (int)rect.h };
-        SDL_SetRenderDrawColor(ren, 100, 100, 100, 255);
+        SDL_SetRenderDrawColor(ren, 50, 50, 255, 255);
         SDL_RenderFillRect(ren, &sdlRect);
 
         // Cast and draw rays
