@@ -50,6 +50,8 @@ int checkBallCollision(Ball* a, Ball* b) {
 
 // Resolve collision between two balls
 void resolveBallCollision(Ball* a, Ball* b) {
+    if (a->radius <= 0.0f || b->radius <= 0.0f) return;
+
     // Calculate vector between centers
     float dx = b->x - a->x;
     float dy = b->y - a->y;
